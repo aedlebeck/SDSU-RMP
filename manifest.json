@@ -1,0 +1,34 @@
+{
+   "name" : "SDSU Rate My Professor",
+   "description" : "Shows ratings",
+   "version" : "1.0",
+   "manifest_version" : 3,
+
+   "permissions": [
+      "activeTab",
+      "declarativeContent",
+      "storage",
+      "tabs"
+    ],
+
+    "host_permissions" : [
+      "https://www.ratemyprofessors.com/*"
+   ],
+
+   "action": {
+      "default_popup": "popup.html",
+      "default_title": "app"
+    },
+
+   "background": {
+      "service_worker" : "background.js",
+      "type" : "module"
+   },
+
+   "content_scripts": [{
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "matches": ["https://sunspot.sdsu.edu/*"],
+      "run_at": "document_end"
+    }]
+}
