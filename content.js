@@ -67,11 +67,8 @@ function writeData(data, keyword) {
       data = JSON.stringify(data);
       data = data.substring(1, data.length - 1);
       data = data.replaceAll("\"", " ");
-      if (divs[i].innerHTML.includes(keyword) && JSON.stringify(data) !== '{}') {
+      if (divs[i].innerHTML.includes(keyword) && data !== '{}' && data) {
          divs[i].innerHTML = divs[i].innerHTML.replace(temp, data);
-      } else {
-         divs[i].innerHTML = divs[i].innerHTML;
       }
-
    }
 }
