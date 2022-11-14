@@ -1,4 +1,6 @@
 # SDSURMP
+**OUTDATED: Does not work anymore**
+
 Chrome extension to directly link data from RateMyProfessor to the San Diego State course registration. 
 To use the extension download SDSU Rate My Professor 1.0.crx
 
